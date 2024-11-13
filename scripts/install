@@ -45,8 +45,8 @@ ynh_script_progression "Installing the app..."
 
 pushd "$install_dir/frontend/appflowy_web_app"
  	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
- 	ynh_hide_warnings ynh_exec_as_app pnpm install cypress --save-dev
- 	ynh_hide_warnings ynh_exec_as_app pnpm run build
+ 	ynh_hide_warnings ynh_exec_as_app COREPACK_ENABLE_DOWNLOAD_PROMPT=0 pnpm install cypress --save-dev
+ 	ynh_hide_warnings ynh_exec_as_app COREPACK_ENABLE_DOWNLOAD_PROMPT=0 pnpm run build
 popd
 
 #=================================================
