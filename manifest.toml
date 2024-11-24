@@ -7,7 +7,7 @@ name = "AppFlowy"
 description.en = "Bring projects, wikis, and teams together with AI"
 description.fr = "Rassemblez des projets, des wikis et des équipes grâce à l'IA"
 
-version = "0.7.3~ynh1"
+version = "0.7.47~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -47,8 +47,8 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/AppFlowy-IO/AppFlowy/archive/refs/tags/0.7.3.tar.gz"
-    sha256 = "ea6973328d5cecccdc94ffe12db15769d7858e6aeafdaba1fcf2d7e6a9dc7423"
+    url = "https://github.com/AppFlowy-IO/AppFlowy/archive/refs/tags/0.7.4.tar.gz"
+    sha256 = "5d42f6c660fd774be5905bfb931d23189a06f6cf791c9f084b9c5f5f52d0ab60"
 
     # autoupdate.strategy = "latest_github_tag"
 
@@ -61,3 +61,9 @@ ram.runtime = "50M"
 
     [resources.ports]
     main.default = 3000
+
+    [resources.apt]
+    packages = ["postgresql", "redis-server"]
+
+    [resources.database]
+    type = "postgresql"
